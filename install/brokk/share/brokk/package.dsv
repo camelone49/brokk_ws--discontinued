@@ -1,0 +1,8 @@
+source;share/brokk/hook/cmake_prefix_path.ps1
+source;share/brokk/hook/cmake_prefix_path.dsv
+source;share/brokk/hook/cmake_prefix_path.sh
+source;share/brokk/local_setup.bash
+source;share/brokk/local_setup.dsv
+source;share/brokk/local_setup.ps1
+source;share/brokk/local_setup.sh
+source;share/brokk/local_setup.zsh

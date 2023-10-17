@@ -1,0 +1,161 @@
+[0.021s] Invoking command in '/home/hisham/brokk_ws/build/brokk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk -- -j12 -l12
+[0.047s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.166s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.179s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.254s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.273s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.276s] -- Added test 'lint_cmake' to check CMake code style
+[0.278s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.287s] -- Added test 'xmllint' to check XML markup files
+[0.290s] -- Configuring done
+[0.293s] -- Generating done
+[0.295s] -- Build files have been written to: /home/hisham/brokk_ws/build/brokk
+[0.320s] Invoked command in '/home/hisham/brokk_ws/build/brokk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk -- -j12 -l12
+[0.344s] Invoking command in '/home/hisham/brokk_ws/build/brokk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk
+[0.349s] -- Install configuration: ""
+[0.349s] -- Execute custom install script
+[0.350s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/config/empty.yaml
+[0.350s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/config/view_brokk.rviz
+[0.351s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/base.STL
+[0.357s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/base.stl
+[0.363s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/base_final2.dae
+[0.370s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/base_final2.stl
+[0.376s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body1.STL
+[0.382s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body1.dae
+[0.388s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body1.stl
+[0.393s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body2.STL
+[0.399s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body2.dae
+[0.405s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body2.stl
+[0.411s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body3.STL
+[0.417s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body3.dae
+[0.423s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body3.stl
+[0.429s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body4.STL
+[0.436s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body4.dae
+[0.442s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body4.stl
+[0.448s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/body4_scaled.STL
+[0.455s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/brokk_arm.urdf
+[0.462s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/legs.stl
+[0.468s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/legs_final2.dae
+[0.475s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/legs_final2.stl
+[0.481s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/legs_reduced.dae
+[0.487s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/base.STL
+[0.494s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/body1.STL
+[0.501s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/body2.STL
+[0.508s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/body3.STL
+[0.514s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/body4.STL
+[0.520s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/legs.STL
+[0.527s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/back/legs.dae
+[0.533s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/base.dae
+[0.540s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/base.stl
+[0.546s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/legs.dae
+[0.553s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/legs.stl
+[0.560s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/tmp/base.STL
+[0.566s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/tmp/body1.STL
+[0.572s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/tmp/body2.STL
+[0.578s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/tmp/body3.STL
+[0.584s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/old_backup/tmp/body4.STL
+[0.591s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/meshfiles_unused/tip.STL
+[0.597s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/.urdf
+[0.597s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/archiv/base.STL
+[0.597s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/archiv/brokk.urdf
+[0.597s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/archiv/brokk_arm.urdf
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/archiv/brokk_robot.urdf.xacro
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/archiv/my_brokk.urdf
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/back/brokk_arm.urdf
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/base.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/base_big.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/body1.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/body2.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/body3.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/body4.STL
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk.urdf.xacro
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk.xml
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk_arm.dae
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk_arm.gazebo.xacro
+[0.598s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk_arm.transmission.xacro
+[0.599s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/brokk_arm.urdf.xacro
+[0.599s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/common.gazebo.xacro
+[0.599s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk170_urdf/urdf/root.STL
+[0.599s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/brokk_vH.urdf.xacro
+[0.605s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/base.STL
+[0.613s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/base.stl
+[0.619s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/base_final2.dae
+[0.625s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/base_final2.stl
+[0.631s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body1.STL
+[0.638s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body1.dae
+[0.645s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body1.stl
+[0.650s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body2.STL
+[0.656s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body2.dae
+[0.662s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body2.stl
+[0.667s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body3.STL
+[0.673s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body3.dae
+[0.678s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body3.stl
+[0.685s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body4.STL
+[0.692s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body4.dae
+[0.698s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body4.stl
+[0.707s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/body4_scaled.STL
+[0.714s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/brokk_arm.urdf
+[0.719s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/legs.stl
+[0.725s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/legs_final2.dae
+[0.731s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/legs_final2.stl
+[0.738s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/legs_reduced.dae
+[0.744s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/base.STL
+[0.749s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/body1.STL
+[0.755s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/body2.STL
+[0.761s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/body3.STL
+[0.767s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/body4.STL
+[0.772s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/legs.STL
+[0.778s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/back/legs.dae
+[0.784s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/base.dae
+[0.789s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/base.stl
+[0.795s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/legs.dae
+[0.800s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/legs.stl
+[0.806s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/tmp/base.STL
+[0.811s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/tmp/body1.STL
+[0.817s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/tmp/body2.STL
+[0.823s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/tmp/body3.STL
+[0.829s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/old_backup/tmp/body4.STL
+[0.835s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_hishversion/meshfiles/tip.STL
+[0.841s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v1.urdf.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v1_gazebo.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v2.urdf.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v2_gazebo.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3.urdf
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3.urdf.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3_gazebo.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v4.urdf.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v4_gazebo.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v5.urdf.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v5_gazebo.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/common_properties.xacro
+[0.842s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/legs_final2.stl
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/legs_final2.stl
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.dae
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.stl
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/robot.urdf.xacro
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/simple.urdf.xacro
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot3_prismatic.urdf.xacro
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot_improv.dae
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot_improv.gazebo.xacro
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot_improv.stl
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/launch/rsp.launch.py
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/worlds/empty.world
+[0.843s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/meshes/legs_final2.stl
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/meshes/turtlebot_improv.dae
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/meshes/turtlebot_improv.stl
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/package_run_dependencies/brokk
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/parent_prefix_path/brokk
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.sh
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.dsv
+[0.844s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.sh
+[0.845s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.dsv
+[0.845s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.bash
+[0.845s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.sh
+[0.845s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.zsh
+[0.845s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.dsv
+[0.845s] -- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/package.dsv
+[0.851s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/packages/brokk
+[0.852s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig.cmake
+[0.852s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig-version.cmake
+[0.852s] -- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/package.xml
+[0.854s] Invoked command in '/home/hisham/brokk_ws/build/brokk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk

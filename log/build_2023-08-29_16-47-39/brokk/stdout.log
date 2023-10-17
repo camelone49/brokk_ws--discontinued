@@ -1,0 +1,53 @@
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hisham/brokk_ws/build/brokk
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/config/empty.yaml
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v1.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v1_gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v2.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v2_gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3.urdf
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v3_gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v4.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v4_gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v5.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/brokk_v5_gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/common_properties.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/legs_final2.stl
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.dae
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.stl
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/simple.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot3_prismatic.urdf.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/turtlebot_improv.gazebo.xacro
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/launch/rsp.launch.py
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/worlds/empty.world
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/legs_final2.stl
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.dae
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/description/meshes/turtlebot_improv.stl
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/package_run_dependencies/brokk
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/parent_prefix_path/brokk
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.sh
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.dsv
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.bash
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.sh
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.zsh
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.dsv
+-- Symlinking: /home/hisham/brokk_ws/install/brokk/share/brokk/package.dsv
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/packages/brokk
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig.cmake
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig-version.cmake
+-- Up-to-date symlink: /home/hisham/brokk_ws/install/brokk/share/brokk/package.xml

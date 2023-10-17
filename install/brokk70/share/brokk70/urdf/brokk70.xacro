@@ -1,0 +1,371 @@
+<?xml version="1.0" ?>
+<robot name="brokk70" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find brokk70)/urdf/materials.xacro" />
+<xacro:include filename="$(find brokk70)/urdf/brokk70.gazebo" />
+<xacro:include filename="$(find brokk70)/urdf/brokk70_control.xacro" />
+<xacro:include filename="$(find brokk70)/urdf/lidar.xacro" />
+<xacro:include filename="$(find brokk70)/urdf/inertial_macros.xacro" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.08085119432482685 1.3154078217780807e-06 0.3253779518398226" rpy="0 0 0"/>
+    <mass value="1441.608708998369"/>
+    <inertia ixx="58.269687" iyy="164.008688" izz="152.367637" ixy="3.5e-05" iyz="-3.5e-05" ixz="26.151771"/>
+  </inertial><!--
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>-->
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_link_vis">
+  <inertial>
+    <origin xyz="-0.08085119432482685 1.3154078217780807e-06 0.3253779518398226" rpy="0 0 0"/>
+    <mass value="1441.608708998369"/>
+    <inertia ixx="58.269687" iyy="164.008688" izz="152.367637" ixy="3.5e-05" iyz="-3.5e-05" ixz="26.151771"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/base_link_vis.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual><!--
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/base_link_vis.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>-->
+</link>
+
+<link name="leg_hr_1">
+  <inertial>
+    <origin xyz="1.8671844070894394e-09 -0.2081580825676862 -0.15828715947874517" rpy="0 0 0"/>
+    <mass value="54.52275511597309"/>
+    <inertia ixx="1.031913" iyy="0.37255" izz="0.779077" ixy="-0.0" iyz="-0.375258" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.5975 0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_hr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.5975 0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_hr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_hl_1">
+  <inertial>
+    <origin xyz="1.8671849622009518e-09 0.20815770736751116 -0.15828715947874522" rpy="0 0 0"/>
+    <mass value="54.52275511597313"/>
+    <inertia ixx="1.031913" iyy="0.37255" izz="0.779077" ixy="0.0" iyz="0.375258" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.5975 -0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_hl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.5975 -0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_hl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_vr_1">
+  <inertial>
+    <origin xyz="1.8671891810484453e-09 -0.20815808256768292 -0.15828715947874558" rpy="0 0 0"/>
+    <mass value="54.52275511597305"/>
+    <inertia ixx="1.031913" iyy="0.37255" izz="0.779077" ixy="-0.0" iyz="-0.375258" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.5975 0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_vr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.5975 0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_vr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_vl_1">
+  <inertial>
+    <origin xyz="-6.288681575483679e-09 0.208157707367515 -0.15828715947874517" rpy="0 0 0"/>
+    <mass value="54.522755115973105"/>
+    <inertia ixx="1.031913" iyy="0.37255" izz="0.779077" ixy="-0.0" iyz="0.375258" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.5975 -0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_vl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.5975 -0.132021 -0.250624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/leg_vl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="effector_base_1">
+  <inertial>
+    <origin xyz="0.08481474086451872 0.2840626318331204 0.3644871837387894" rpy="0 0 0"/>
+    <mass value="626.3712637582394"/>
+    <inertia ixx="16.981508" iyy="18.628673" izz="25.051726" ixy="0.0" iyz="0.0" ixz="0.381927"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.117515 0.284061 -0.184455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/effector_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.117515 0.284061 -0.184455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/effector_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="wheel_r_1">
+  <inertial>
+    <origin xyz="-2.8116734640537544e-07 -0.023818564203939963 -2.922945549210798e-07" rpy="0 0 0"/>
+    <mass value="12.438613501028692"/>
+    <inertia ixx="0.035412" iyy="0.06403" izz="0.033433" ixy="-0.0" iyz="0.0" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.353353 0.206917 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/wheel_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual><!--
+  <collision>
+    <origin xyz="0.353353 0.206917 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/wheel_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>-->
+</link>
+
+<link name="wheel_l_1">
+  <inertial>
+    <origin xyz="-2.8116734640537544e-07 0.023818564203939963 -2.922945548100575e-07" rpy="0 0 0"/>
+    <mass value="12.438613501028692"/>
+    <inertia ixx="0.035412" iyy="0.06403" izz="0.033433" ixy="0.0" iyz="-0.0" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.353353 -0.206917 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/wheel_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual><!--
+  <collision>
+    <origin xyz="0.353353 -0.206917 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/wheel_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>-->
+</link>
+
+
+<link name="track_l_1">
+  <inertial>
+    <origin xyz="-0.35429778796507544 0.0014385807546314355 -0.0018653823594724506" rpy="0 0 0"/>
+    <mass value="76.11694057053073"/>
+    <inertia ixx="0.738772" iyy="7.365073" izz="6.806997" ixy="-0.013867" iyz="-0.000161" ixz="-0.004447"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.392586 -0.2267 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/track_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual><!--
+  <collision>
+    <origin xyz="-0.392586 -0.2267 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/track_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>-->
+</link>
+
+<link name="track_r_1">
+  <inertial>
+    <origin xyz="-0.3542977879650755 -0.0014385807546314355 -0.0018653823594722702" rpy="0 0 0"/>
+    <mass value="76.11694057053069"/>
+    <inertia ixx="0.738772" iyy="7.365073" izz="6.806997" ixy="0.013867" iyz="0.000161" ixz="-0.004447"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.392586 0.2267 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/track_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual><!--
+  <collision>
+    <origin xyz="-0.392586 0.2267 -0.125724" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/track_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>-->
+</link>
+
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="1.3333024028588936e-07 -0.06513254435149454 -2.922945535749344e-07" rpy="0 0 0"/>
+    <mass value="49.9514206426285"/>
+    <inertia ixx="0.265896" iyy="0.391346" izz="0.265896" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial><!--
+  <visual>
+    <origin xyz="-0.020002 0.17 -0.124999" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>-->
+  <collision>
+    <origin xyz="-0.020002 0.17 -0.124999" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="1.3333024028588936e-07 0.06513254435149454 -2.9229455364432333e-07" rpy="0 0 0"/>
+    <mass value="49.9514206426285"/>
+    <inertia ixx="0.265896" iyy="0.391346" izz="0.265896" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial><!--
+  <visual>
+    <origin xyz="-0.020002 -0.17 -0.124999" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>-->
+  <collision>
+    <origin xyz="-0.020002 -0.17 -0.124999" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find brokk70)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<joint name="base" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_link_vis"/>
+  <axis xyz="0.0 0.0 0.0"/>
+</joint>
+
+<joint name="leg_hr_rot" type="fixed">
+  <origin xyz="-0.5975 -0.132021 0.250624" rpy="-1.5708 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_hr_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="leg_hl_rot" type="fixed">
+  <origin xyz="-0.5975 0.132021 0.250624" rpy="1.5708 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_hl_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="leg_vr_rot" type="fixed">
+  <origin xyz="0.5975 -0.132021 0.250624" rpy="-1.5708 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_vr_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="leg_vl_rot" type="fixed">
+  <origin xyz="0.5975 0.132021 0.250624" rpy="1.5708 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_vl_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="wheel_right" type="fixed">
+  <origin xyz="-0.353353 -0.206917 0.125724" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_r_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheel_left" type="fixed">
+  <origin xyz="-0.353353 0.206917 0.125724" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_l_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+ 
+<joint name="track_left" type="fixed">
+  <origin xyz="0.392586 0.2267 0.125724" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="track_l_1"/>
+</joint>
+
+<joint name="track_right" type="fixed">
+  <origin xyz="0.392586 -0.2267 0.125724" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="track_r_1"/>
+</joint>
+
+<joint name="effector_rot" type="fixed">
+  <origin xyz="0.117515 -0.284061 0.184455" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="effector_base_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="wheel_right_rot" type="continuous">
+  <origin xyz="0.020002 -0.17 0.124999" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheel_left_rot" type="continuous">
+  <origin xyz="0.020002 0.17 0.124999" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>

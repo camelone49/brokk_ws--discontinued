@@ -1,0 +1,25 @@
+[0.011s] Invoking command in '/home/hisham/brokk_ws/build/brokk_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk_gazebo -- -j12 -l12
+[0.038s] Invoked command in '/home/hisham/brokk_ws/build/brokk_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk_gazebo -- -j12 -l12
+[0.061s] Invoking command in '/home/hisham/brokk_ws/build/brokk_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk_gazebo
+[0.065s] -- Install configuration: ""
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/config
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/description
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/launch
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/launch/launch_robot.py
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/worlds
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/ament_index/resource_index/package_run_dependencies/brokk_gazebo
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/ament_index/resource_index/parent_prefix_path/brokk_gazebo
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/environment/ament_prefix_path.sh
+[0.066s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/environment/ament_prefix_path.dsv
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/environment/path.sh
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/environment/path.dsv
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/local_setup.bash
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/local_setup.sh
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/local_setup.zsh
+[0.067s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/local_setup.dsv
+[0.067s] -- Installing: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/package.dsv
+[0.068s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/ament_index/resource_index/packages/brokk_gazebo
+[0.068s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/cmake/brokk_gazeboConfig.cmake
+[0.069s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/cmake/brokk_gazeboConfig-version.cmake
+[0.070s] -- Up-to-date: /home/hisham/brokk_ws/install/brokk_gazebo/share/brokk_gazebo/package.xml
+[0.074s] Invoked command in '/home/hisham/brokk_ws/build/brokk_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hisham/turtlebot3_ws/install/turtlebot3_teleop:/home/hisham/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk_gazebo

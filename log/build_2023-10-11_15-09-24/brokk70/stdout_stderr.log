@@ -1,0 +1,59 @@
+running egg_info
+creating ../../build/brokk70/brokk70.egg-info
+writing ../../build/brokk70/brokk70.egg-info/PKG-INFO
+writing dependency_links to ../../build/brokk70/brokk70.egg-info/dependency_links.txt
+writing entry points to ../../build/brokk70/brokk70.egg-info/entry_points.txt
+writing requirements to ../../build/brokk70/brokk70.egg-info/requires.txt
+writing top-level names to ../../build/brokk70/brokk70.egg-info/top_level.txt
+writing manifest file '../../build/brokk70/brokk70.egg-info/SOURCES.txt'
+reading manifest file '../../build/brokk70/brokk70.egg-info/SOURCES.txt'
+writing manifest file '../../build/brokk70/brokk70.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hisham/brokk_ws/build/brokk70/build
+creating /home/hisham/brokk_ws/build/brokk70/build/lib
+creating /home/hisham/brokk_ws/build/brokk70/build/lib/brokk70
+copying brokk70/__init__.py -> /home/hisham/brokk_ws/build/brokk70/build/lib/brokk70
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70
+copying /home/hisham/brokk_ws/build/brokk70/build/lib/brokk70/__init__.py -> /home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70
+byte-compiling /home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/hisham/brokk_ws/install/brokk70/share/ament_index
+creating /home/hisham/brokk_ws/install/brokk70/share/ament_index/resource_index
+creating /home/hisham/brokk_ws/install/brokk70/share/ament_index/resource_index/packages
+copying resource/brokk70 -> /home/hisham/brokk_ws/install/brokk70/share/ament_index/resource_index/packages
+copying package.xml -> /home/hisham/brokk_ws/install/brokk70/share/brokk70
+creating /home/hisham/brokk_ws/install/brokk70/share/brokk70/launch
+copying launch/display.launch.py -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/launch
+copying launch/gazebo.launch.py -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/launch
+creating /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/inertial_macros.xacro -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/brokk70.xacro -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/lidar.xacro -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/brokk70_control.xacro -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/materials.xacro -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+copying urdf/brokk70.gazebo -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/urdf
+creating /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/left_wheel_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/leg_hl_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/wheel_l_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/wheel_r_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/base_link_vis.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/track_r_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/leg_vr_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/right_wheel_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/base_link.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/leg_hr_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/effector_base_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/track_l_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+copying meshes/leg_vl_1.stl -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/meshes
+creating /home/hisham/brokk_ws/install/brokk70/share/brokk70/config
+copying config/display.rviz -> /home/hisham/brokk_ws/install/brokk70/share/brokk70/config
+running install_egg_info
+Copying ../../build/brokk70/brokk70.egg-info to /home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/hisham/brokk_ws/build/brokk70/install.log'

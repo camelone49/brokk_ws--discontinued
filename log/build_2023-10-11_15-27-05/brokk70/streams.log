@@ -1,0 +1,22 @@
+[0.560s] Invoking command in '/home/hisham/brokk_ws/src/brokk70': PYTHONPATH=/home/hisham/brokk_ws/build/brokk70/prefix_override:/home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/brokk70 build --build-base /home/hisham/brokk_ws/build/brokk70/build install --record /home/hisham/brokk_ws/build/brokk70/install.log --single-version-externally-managed
+[0.766s] running egg_info
+[0.767s] writing ../../build/brokk70/brokk70.egg-info/PKG-INFO
+[0.767s] writing dependency_links to ../../build/brokk70/brokk70.egg-info/dependency_links.txt
+[0.767s] writing entry points to ../../build/brokk70/brokk70.egg-info/entry_points.txt
+[0.767s] writing requirements to ../../build/brokk70/brokk70.egg-info/requires.txt
+[0.767s] writing top-level names to ../../build/brokk70/brokk70.egg-info/top_level.txt
+[0.768s] reading manifest file '../../build/brokk70/brokk70.egg-info/SOURCES.txt'
+[0.769s] writing manifest file '../../build/brokk70/brokk70.egg-info/SOURCES.txt'
+[0.769s] running build
+[0.769s] running build_py
+[0.769s] running install
+[0.769s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.770s]   warnings.warn(
+[0.770s] running install_lib
+[0.771s] running install_data
+[0.771s] running install_egg_info
+[0.773s] removing '/home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70-0.0.0-py3.10.egg-info' (and everything under it)
+[0.773s] Copying ../../build/brokk70/brokk70.egg-info to /home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages/brokk70-0.0.0-py3.10.egg-info
+[0.774s] running install_scripts
+[0.789s] writing list of installed files to '/home/hisham/brokk_ws/build/brokk70/install.log'
+[0.806s] Invoked command in '/home/hisham/brokk_ws/src/brokk70' returned '0': PYTHONPATH=/home/hisham/brokk_ws/build/brokk70/prefix_override:/home/hisham/brokk_ws/install/brokk70/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/brokk70 build --build-base /home/hisham/brokk_ws/build/brokk70/build install --record /home/hisham/brokk_ws/build/brokk70/install.log --single-version-externally-managed

@@ -1,0 +1,4 @@
+Invoking command in '/home/hisham/brokk_ws/build/brokk_gazebo': /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk_gazebo -- -j12 -l12
+Invoked command in '/home/hisham/brokk_ws/build/brokk_gazebo' returned '0': /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk_gazebo -- -j12 -l12
+Invoking command in '/home/hisham/brokk_ws/build/brokk_gazebo': /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk_gazebo
+Invoked command in '/home/hisham/brokk_ws/build/brokk_gazebo' returned '0': /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk_gazebo
