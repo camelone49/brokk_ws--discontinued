@@ -1,0 +1,60 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hisham/brokk_ws/build/brokk
+-- Install configuration: ""
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//launch
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//launch/display.launch.py
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//launch/gazebo.launch.py
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//models
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//models/model.config
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//models/meshes
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//models/meshes/brokk_base_collision.stl
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//models/meshes/brokk_base_edit.stl
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//rviz
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//rviz/display.rviz
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk170_gazebo.xacro
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk170_control.xacro
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokkmodel.xacro
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk_base_collision.stl
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/common_properties.xacro
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk_base_edit.stl
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk//worlds
+-- Installing: /home/hisham/brokk_ws/install/brokk/include/
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/package_run_dependencies/brokk
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/parent_prefix_path/brokk
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.sh
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.dsv
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.sh
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/environment/path.dsv
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.bash
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.sh
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.zsh
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/local_setup.dsv
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/package.dsv
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/packages/brokk
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig.cmake
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/cmake/brokkConfig-version.cmake
+-- Installing: /home/hisham/brokk_ws/install/brokk/share/brokk/package.xml

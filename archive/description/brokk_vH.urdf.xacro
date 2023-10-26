@@ -1,0 +1,556 @@
+<?xml version="1.0" ?>
+<robot name="testurdf" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find brokk)/description/common_properties.xacro"/>
+  <xacro:include filename="$(find brokk)/description/brokk170_gazebo.xacro"/>
+    <xacro:include filename="$(find brokk)/description/brokk170_control.xacro"/>
+
+  <xacro:property name="joint_damping" value="100"/>
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
+  <xacro:property name="width" value="0.1" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="height1" value="2" /> <!-- Link 1 -->
+  <xacro:property name="height2" value="1" /> <!-- Link 2 -->
+  <xacro:property name="height3" value="1" /> <!-- Link 3 -->
+
+  <xacro:property name="r200_cam_rgb_px" value="0.005"/>
+  <xacro:property name="r200_cam_rgb_py" value="0.018"/>
+  <xacro:property name="r200_cam_rgb_pz" value="0.013"/>
+  <xacro:property name="r200_cam_depth_offset" value="0.01"/>
+
+  <xacro:property name="brokk_base_lower_limit" value="0.152"/>
+  <xacro:property name="brokk_base_upper_limit" value="2.983"/>
+  <xacro:property name="brokk_body1_lower_limit" value="0.2513"/>
+  <xacro:property name="brokk_body1_upper_limit" value="2.2617"/>
+  <xacro:property name="brokk_body2_lower_limit" value="0.076"/>
+  <xacro:property name="brokk_body2_upper_limit" value="1.444"/>
+  <xacro:property name="brokk_body3_lower_limit" value="0.096"/>
+  <xacro:property name="brokk_body3_upper_limit" value="1.824"/>
+  <xacro:property name="brokk_body4_lower_limit" value="0.128"/>
+  <xacro:property name="brokk_body4_upper_limit" value="2.4367"/>
+  <xacro:property name="safety_limits" value="0.15"/>
+  <xacro:property name="brokk_arm_vel_limit" value="50.0"/>
+  <xacro:property name="k_velocity" value="1.0"/>
+
+  <!--
+  <xacro:macro name="brokk_arm" params="prefix joint_limited
+    brokk_base_lower_limit:=0.152     brokk_base_upper_limit:=2.983
+    brokk_body1_lower_limit:=0.2513    brokk_body1_upper_limit:=2.2617
+    brokk_body2_lower_limit:=0.076    brokk_body2_upper_limit:=1.444
+    brokk_body3_lower_limit:=0.096    brokk_body3_upper_limit:=1.824
+    brokk_body4_lower_limit:=0.128    brokk_body4_upper_limit:=2.4367
+    safety_limits:=true safety_pos_margin:=0.15
+    brokk_arm_vel_limit:=50.0
+    k_velocity :=1.0
+    description_pkg:='brokk_arm_description'">
+  </xacro:macro>
+  -->
+
+  <link name="base_footprint"/>
+  
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.010" rpy="0 0 0"/>
+  </joint>
+
+  <!-- EINHEIT: BASE LINK / LEGS AND TRACKS __________________________________________________________________________________________________________-->
+
+  <link name="base_link">       <!--robot base??-->
+    <visual>
+          <origin xyz="0.05 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="package://brokk/description/brokk_base_edit.stl" scale="0.011 0.01 0.01"/>
+          </geometry>
+          <material name="LightGrey">
+              <color rgba="0.7 0.7 0.7 1.0"/>
+          </material>
+      </visual>
+
+      <collision>
+          <origin xyz="-0.064 0 0.047" rpy="0 0 0"/>
+          <geometry>
+     	       <mesh filename="package://brokk/description/brokk_base_collision.stl"/> <!--1.725 0.52 0.6-->
+          </geometry>
+      </collision>
+
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="2.34"/>
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+
+  </link> 
+
+^
+  <!--EINHEIT: IMU_LINK ____________________________________________________________________________________________________________________________-->
+
+  <link name="imu_link"/>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.0 0 0.047" rpy="0 0 0"/>
+  </joint>
+
+  <!-- EINHEIT: BASE STRUCTURE ____________________________________________________________________________________________________________________-->
+
+  <link name="brokk_base_structure">
+      <visual>
+          <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="package://brokk/description/base_final2.dae" />
+          </geometry>
+          <material name="LightGrey">
+              <color rgba="0.7 0.7 0.7 1.0"/>
+          </material>      
+      </visual>
+
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh scale="0.001 0.001 0.001"  filename="package://brokk/description/base.stl" />
+          </geometry>
+      </collision>
+
+      <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <mass value="2.34"/>
+          <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+
+  </link>
+
+  <joint name="brokk_base_structure_joint" type="revolute"> <!--not really sure which joint exactly-->
+    <parent link="base_link" />
+    <child link = "brokk_base_structure" />
+    <origin xyz="0.0 0.0 0.54" rpy="0.0 0.0 1.57" />
+    <axis xyz="0 0 -1" />
+    <limit effort="100.0" lower="${brokk_base_lower_limit}" upper="${brokk_base_upper_limit}" velocity="${brokk_arm_vel_limit}"/>
+    <dynamics damping="${joint_damping}"/>
+  </joint>
+
+<!--EINHEIT: ARM; TEIL1 ______________________________________________________________________________________________________________________________-->
+
+  <link name="brokk_arm1">
+      <visual>
+          <geometry>
+          <mesh  filename="package://brokk/description/body1.dae"  />
+          </geometry>
+          <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+          </material>
+      </visual>
+
+      <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+          <mesh scale="0.001 0.001 0.001" filename="package://brokk/description/body1.stl" />
+          </geometry>
+      </collision>
+
+      <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <mass value="2.34"/>
+          <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+    </link>
+
+    <joint name="brokk_arm_jnt1" type="revolute">
+        <parent link="brokk_base_structure" />
+        <child link = "brokk_arm1" />
+        <origin xyz="0.493 0 0.078" rpy="0.0 -0.806 0.0" />
+        <axis xyz="0 1 0" />
+        <limit effort="100.0" lower="${brokk_body1_lower_limit}" upper="${brokk_body1_upper_limit}" velocity="${brokk_arm_vel_limit}"/>
+        <dynamics damping="${joint_damping}"/>
+    </joint>
+
+<!--EINHEIT: ARM; TEIL2 ______________________________________________________________________________________________________________________________-->
+
+<link name="brokk_arm2">
+        <visual>
+            <geometry>
+                <mesh filename="package://brokk/description/body2.dae" />
+            </geometry>
+            <material name="LightGrey">
+                <color rgba="0.7 0.7 0.7 1.0"/>
+            </material>
+        </visual>
+
+        <collision>
+	        <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh scale="0.001 0.001 0.001" filename="package://brokk/description/body2.stl" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="2.34"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+    </link>
+
+    <!--body2 joint _________________________________________________________________________________________________ -->
+    <joint name="brokk_arm_jnt2" type="revolute">
+      <parent link="brokk_arm1" />
+      <child link ="brokk_arm2" />
+      <origin xyz="0 0 0.87" rpy="0.0 0.78 0.0" />
+      <axis xyz="0 -1 0" />
+      <limit effort="100.0" lower="${brokk_body2_lower_limit }" upper="${brokk_body2_upper_limit }" velocity="0.5"/>
+      <dynamics damping="${joint_damping}"/>
+    </joint>
+
+<!--EINHEIT: ARM; TEIL3 ______________________________________________________________________________________________________________________________-->
+
+    <link name="brokk_arm3">
+        <visual>
+            <geometry>
+                <mesh  filename="package://brokk/description/body3.dae" />
+            </geometry>
+            <material name="LightGrey">
+                <color rgba="0.7 0.7 0.7 1.0"/>
+            </material>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh scale="0.001 0.001 0.001" filename="package://brokk/description/body3.stl" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="2.34"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+    </link>
+
+    <!--body3 joint  __________________________________________________________________________________________________ -->
+    <joint name="brokk_arm_jnt3" type="revolute">
+        <parent link="brokk_arm2" />
+        <child link ="brokk_arm3" />
+        <origin xyz="1.37 0.0 0.01" rpy="0.0 1.75 0.0" />
+        <axis xyz="0 -1 0" />
+        <limit effort="100.0" lower="${brokk_body3_lower_limit }" upper="${brokk_body3_upper_limit }" velocity="0.5"/>
+        <dynamics damping="${joint_damping}"/>
+    </joint>
+
+    <!-- EINHEIT: ARM4 ____________________________________________________________________________________________________________-->
+
+     <link name="brokk_arm4">
+        <visual>
+            <geometry>
+                <mesh  filename="package://brokk/description/body4.dae"/>
+            </geometry>
+            <material name="LightGrey">
+                <color rgba="0.7 0.7 0.7 1.0"/>
+            </material>
+        </visual>
+
+        <collision>
+	        <origin xyz=" 0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh scale="0.001 0.001 0.001" filename="package://brokk/description/body4.stl" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="2.34"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+        </inertial>
+    </link>
+
+    <!--joint of body4___________________________________________________________________________________________________________ -->
+    <joint name="brokk_arm_jnt4" type="revolute">
+      <parent link="brokk_arm3" />
+      <child link ="brokk_arm4" />
+      <origin xyz="0.89 0 0.0" rpy="0.0 -1.19 0.0" />
+      <axis xyz="0 1 0" />
+      <limit effort="100.0" lower="${brokk_body4_lower_limit }" upper="${brokk_body4_upper_limit }" velocity="2"/>
+     <dynamics damping="${joint_damping}"/>
+    </joint>
+
+        <!-- brokk tip link ___________________________________________________________________________________________________________ -->
+
+  <!-- linker hinterer Reifen l0oo-->
+
+  <joint name="wheel_left_behind_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_behind_link"/>
+    <origin xyz="-0.46 0.40 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="wheel_left_behind_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+     	 <cylinder radius="0.18" length="0.20"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+  
+	<!-- linker mittel hinten Reifen loo0o-->	
+	
+  <joint name="wheel_left_mittelhinten_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_mittelhinten_link"/>
+    <origin xyz="-0.09 0.40 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  
+  <link name="wheel_left_mittelhinten_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+     	 <cylinder radius="0.18" length="0.20"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0.0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+	
+	<!-- linker mittel vorne Reifen lo0oo-->
+	
+  <joint name="wheel__left_mittelvorne_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_mittelvorne_link"/>
+    <origin xyz="0.28 0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  
+  <link name="wheel_left_mittelvorne_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+     	 <cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+	
+	<!-- rechter mittel hinten Reifen roo0o-->
+	
+  <joint name="wheel_right_mittelhinten_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_mittelhinten_link"/>
+    <origin xyz="-0.08 -0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  
+  <link name="wheel_right_mittelhinten_link">
+    <visual>
+      <origin xyz="0.0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0.0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+	
+	
+	<!-- rechter mittel vorne Reifen ro0oo-->
+	
+  <joint name="wheel_right_mittelvorne_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_mittelvorne_link"/>
+    <origin xyz="0.28 -0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  
+  <link name="wheel_right_mittelvorne_link">
+    <visual>
+      <origin xyz="0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+  
+   <!-- linker vorderer Reifen looo0-->
+  
+  <joint name="left_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_link"/>
+    <origin xyz="0.65 0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <dynamics damping="20"/>
+  </joint>
+
+  <link name="wheel_left_link">
+    <visual>
+      <origin xyz="0 0.0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0 0.0" rpy="1.57 0 0"/>
+      <geometry>
+        <cylinder length="0.2" radius="0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+
+ <!-- rechter hinterer Reifen r0ooo -->
+
+  <joint name="wheel_right_behind_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_behind_link"/>
+    <origin xyz="-0.46 -0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="20"/>
+  </joint>
+
+  <link name="wheel_right_behind_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+  
+   <!-- rechter vorderer Reifen rooo0-->
+  
+  <joint name="right_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_link"/>
+    <origin xyz="0.65 -0.4 0.18" rpy="0 0 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <link name="wheel_right_link">
+    <visual>
+      <origin xyz="0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.0" rpy="-1.57 0 0"/>
+      <geometry>
+      	<cylinder radius="0.18" length="0.2"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.0" />
+      <mass value="2.8498940e-02" />
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+      </inertial>
+  </link>
+
+
+
+</robot>
+
+

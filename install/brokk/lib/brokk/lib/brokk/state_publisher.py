@@ -1,1 +1,0 @@
-/home/hisham/brokk_ws/src/brokk/scripts/state_publisher.py

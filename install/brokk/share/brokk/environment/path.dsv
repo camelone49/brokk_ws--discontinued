@@ -1,1 +1,1 @@
-/home/hisham/brokk_ws/build/brokk/ament_cmake_environment_hooks/path.dsv
+prepend-non-duplicate-if-exists;PATH;bin
