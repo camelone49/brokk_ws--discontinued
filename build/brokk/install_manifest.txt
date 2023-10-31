@@ -8,9 +8,7 @@
 /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk170_gazebo.xacro
 /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk170_control.xacro
 /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokkmodel.xacro
-/home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk_base_collision.stl
 /home/hisham/brokk_ws/install/brokk/share/brokk//urdf/common_properties.xacro
-/home/hisham/brokk_ws/install/brokk/share/brokk//urdf/brokk_base_edit.stl
 /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/package_run_dependencies/brokk
 /home/hisham/brokk_ws/install/brokk/share/ament_index/resource_index/parent_prefix_path/brokk
 /home/hisham/brokk_ws/install/brokk/share/brokk/environment/ament_prefix_path.sh

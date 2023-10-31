@@ -1,0 +1,4 @@
+Invoking command in '/home/hisham/brokk_ws/build/brokk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk -- -j12 -l12
+Invoked command in '/home/hisham/brokk_ws/build/brokk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hisham/brokk_ws/build/brokk -- -j12 -l12
+Invoking command in '/home/hisham/brokk_ws/build/brokk': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk
+Invoked command in '/home/hisham/brokk_ws/build/brokk' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hisham/brokk_ws/build/brokk

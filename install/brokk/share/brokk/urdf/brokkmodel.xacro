@@ -4,6 +4,7 @@
   <xacro:include filename="$(find brokk)/urdf/brokk170_gazebo.xacro"/>
   <xacro:include filename="$(find brokk)/urdf/brokk170_control.xacro"/>
 
+
   <xacro:arg name="use_ros2_control" default="true"/>
 
   <xacro:property name="joint_damping" value="100"/>
@@ -132,7 +133,7 @@
       <inertial>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
         <mass value="49.9514206426285"/>
-        <inertia ixx="0.265896" iyy="0.391346" izz="0.265896" ixy="0.0" iyz="0.0" ixz="0.0"/>>
+        <inertia ixx="0.265896" iyy="0.391346" izz="0.265896" ixy="0.0" iyz="0.0" ixz="0.0"/>
       </inertial>
   </link>
 
@@ -268,7 +269,7 @@
 
   <link name="wheel_right_behind_link">
     <visual>
-      <origin xyz="0 0 0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -276,7 +277,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -307,7 +308,7 @@
   
   <link name="wheel_right_mittelhinten_link">
     <visual>
-      <origin xyz="0.0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0.0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -315,7 +316,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0.0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0.0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -347,7 +348,7 @@
   
   <link name="wheel_right_mittelvorne_link">
     <visual>
-      <origin xyz="0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -355,7 +356,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -395,7 +396,7 @@
 
   <link name="wheel_right_link">
     <visual>
-      <origin xyz="0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>
@@ -403,7 +404,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0.0" rpy="-0 0 0"/>
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
       <geometry>
       	<mesh filename="file://$(find brokk)/models/meshes/wheel.stl"/>
       </geometry>

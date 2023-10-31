@@ -11,7 +11,7 @@
             <wheel_diameter>0.36</wheel_diameter>
 
             <!-- Limits -->
-            <max_wheel_torque>20000</max_wheel_torque>
+            <max_wheel_torque>200</max_wheel_torque>
             <max_wheel_acceleration>10.0</max_wheel_acceleration>
             
             <!-- Output -->
@@ -20,7 +20,7 @@
 
             <publish_odom>true</publish_odom>
             <publish_odom_tf>true</publish_odom_tf>
-            <publish_wheel_tf>true</publish_wheel_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>^
 
         </plugin>
 

@@ -1,12 +1,18 @@
+import os
+import xacro
+
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
-import os
-import xacro
+from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
+from launch.actions import DeclareLaunchArgument
+
+
+
 
 
 def generate_launch_description():
@@ -65,6 +71,14 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='true',
+            description='Use sim time if true'),
+        DeclareLaunchArgument(
+            'use_ros2_control',
+            default_value='true',
+            description='Use ros2_control if true'),    
         robot_state_publisher_node,
         joint_state_publisher_node,
         gazebo_server,
